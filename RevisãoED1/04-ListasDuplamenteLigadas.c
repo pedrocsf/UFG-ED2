@@ -51,13 +51,48 @@ void printList()
     printf("\n");
 }
 
+void buscar()
+{
+    int elemento;
+    printf("Digite o valor a ser buscado: ");
+    scanf("%d", &elemento);
+
+    while (1)
+    {
+        int temp = 1;
+        Node *current = head;
+        while (current != NULL)
+        {
+            if (current->data == elemento)
+            {
+                break;
+            }
+            current = current->next;
+            temp++;
+        }
+        if (current != NULL)
+        {
+            printf("Elemento %d encontrado na posição %d \n", elemento, temp);
+            printf("Elemento anterior: %d \n", current->prev->data);
+            printf("Elemento seguinte: %d", current->next->data);
+        }
+        else
+        {
+            printf("Elemento %d não encontrado\n", elemento);
+        }
+        return;
+    }
+}
+
 int main()
 {
+    int tamanho = 1;
     while (1)
     {
         printf("Digite o valor a ser inserido:");
         int n;
         int m = 0;
+        int temp = 0;
         scanf("%d", &n);
         insertFront(n);
         printf("Deseja inserir um novo valor?\n");
@@ -73,9 +108,13 @@ int main()
         {
             break;
         }
+        if (m == 1)
+        {
+            tamanho++;
+        }
     }
     printf("Lista criada: ");
     printList();
-
+    buscar();
     return 0;
 }
