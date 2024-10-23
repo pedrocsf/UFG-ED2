@@ -61,11 +61,11 @@ int main()
 
     TabelaHash tabela = {NULL};
 
-    Entrega e1 = {1345, "Goiania", 0.45, 1};
-    Entrega e2 = {2299, "Parnaiba", 5.0, 10};
-    Entrega e3 = {8756, "Natal", 1.2, 8};
-    Entrega e4 = {8290, "Bodoco", 0.1, 3};
-    Entrega e5 = {1001, "Guapo", 2, 1};
+    Entrega e1 = {3421, "Fortaleza", 3.75, 7};
+    Entrega e2 = {9150, "Salvador", 2.3, 5};
+    Entrega e3 = {6438, "Joao Pessoa", 1.8, 4};
+    Entrega e4 = {2774, "Recife", 0.9, 2};
+    Entrega e5 = {5612, "Cuiaba", 4.1, 9};
 
     inserir(&tabela, &e1);
     inserir(&tabela, &e2);
