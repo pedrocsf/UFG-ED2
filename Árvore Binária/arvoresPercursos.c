@@ -183,13 +183,21 @@ int main()
     root = insertNode(root, 104, 30);
     root = insertNode(root, 105, 70);
 
-    // Exibindo usuários em ordem
-    printf("Usuários em ordem de idade:\n");
+    // Exibindo usuários em ordem crescente de ID (em-ordem)
+    printf("Usuários em ordem crescente de ID (em-ordem):\n");
     exibirEmOrdem(root);
+
+    // Exibindo usuários em pré-ordem
+    printf("\nUsuários em pré-ordem:\n");
+    exibirPreOrdem(root);
+
+    // Exibindo usuários em pós-ordem
+    printf("\nUsuários em pós-ordem:\n");
+    exibirPosOrdem(root);
 
     // Removendo um usuário
     root = deleteUser(root, 105);
-    printf("\nApós remoção do usuário:\n");
+    printf("\nApós remoção do usuário com ID 105:\n");
     exibirEmOrdem(root);
 
     return 0;
